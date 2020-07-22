@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-  items = Item.create([
+  Item.create([
                           { :name => 'Bagel w. CC' },
                           { :name => 'Pastrami Sandwich' },
                           { :name => 'Classic Cheesburger' },
