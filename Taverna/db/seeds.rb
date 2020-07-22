@@ -3,5 +3,10 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+  items = Item.create([
+                          { :name => 'Bagel w. CC' },
+                          { :name => 'Pastrami Sandwich' },
+                          { :name => 'Classic Cheesburger' },
+                          { :name => 'Meatloaf' }
+                        ])
 #   Character.create(name: 'Luke', movie: movies.first)
