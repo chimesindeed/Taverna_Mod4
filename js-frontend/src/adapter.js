@@ -20,7 +20,7 @@ class Adapter {
     headers: {
       'content-type': 'application/json',
     },
-    name: JSON.stringify({item})
+    body: JSON.stringify({item})
     }).then(res => res.json())
   }
 }
