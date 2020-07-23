@@ -8,10 +8,22 @@
 </head>
 <body>
   <h1 id=top>Taverna</h1>
-    <button id='get-items-button'>Get Menu Items</button>
-  <ul id='ul-items-holder'>
-  </ul>
+  <div> id= "taverna-container"
+    <div id= "left-col">
+      <h3> Your Menu Items </h3>
+        <ul id='ul-items-holder'></ul>
+    </div>
+    <div id= "right-col">
+      <h3> Add Menu Item </h3>
 
+      <form id=create-item-form>
+        <input id="form-input">
+        <input id="form-submit" type="submit">
+      </form>
+      
+    </div>
+  </div>
+    
 <script src='src/adapter.js'></script>
 <script src='src/item.js'></script>
 <script src='src/app.js'></script>
