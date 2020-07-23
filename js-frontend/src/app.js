@@ -5,13 +5,20 @@ class App {
     this.allItems = []
     this.adapter = new Adapter
     this.isolateDOMElements()
+    this.createItem()
+    this.addListeners()
     this.getItems()
   }
 
   isolateDOMElements() {
    this.ul = document.getElementById('ul-items-holder')
    this.li = document.createElement('li')
-   this.form-input = document.getElementById('form-input')
+   this.form = document.getElementById('create-item-form')
+   this.formInput = document.getElementById('form-input')
+  }
+
+  addListeners() {
+    this.form.addEventListener('submit', this.createItem.bind(this))
   }
 
   getItems() {
