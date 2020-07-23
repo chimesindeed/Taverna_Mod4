@@ -6,8 +6,9 @@ class Adapter {
     this.baseURL = url
   }
 
-  retrieveItems(){
+  getItems(){
     return fetch(this.baseURL)
-      .then(res => res.json)
+      .then(res => res.json())
   }
 }
+

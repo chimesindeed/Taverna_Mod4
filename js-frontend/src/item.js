@@ -1,8 +1,9 @@
 class Item {
-  constructor(noteJSON) {
+  constructor(itemJSON) {
     this.id = itemJSON.id
-    this.name = noteJSON.name
-            }
+    this.name = itemJSON.name
+  }
     renderLi() {
       return `<li>${this.name}</li>`
-                    }
+    }
+}
