@@ -12,6 +12,11 @@ class ItemsController < ApplicationController
     render json: item
 end
 
+  def destroy
+    item = Item.find(params[:id])
+
+    render json: {itemId: item.id}
+
   private
 
   def item_params
