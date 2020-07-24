@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    binding.pry
     item = Item.create(item_params)
 
     render json: item
@@ -16,6 +15,7 @@ end
     item = Item.find(params[:id])
 
     render json: {itemId: item.id}
+  end
 
   private
 

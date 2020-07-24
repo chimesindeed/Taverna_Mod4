@@ -4,11 +4,11 @@ class App {
   console.log('app.js was run')
     this.allItems = []
     this.adapter = new Adapter
-    this.isolateDOMElements()
+    this.DOMListenersBindings()
     this.getItems()
   }
 
-  isolateDOMElements() {
+  DOMListenersBindings() {
     this.ul = document.getElementById('ul-items-holder')
     this.li = document.createElement('li')
     this.input = document.getElementById('form-input')
@@ -39,7 +39,7 @@ class App {
     }
 
   render(){
-    this.ul.innerHTML = this.allItems.map(item => item.renderLi()).join('')
+    this.ul.innerHTML = this.allItems.map(item => item.renderItemLi()).join('')
     }
 
   }
