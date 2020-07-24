@@ -9,4 +9,11 @@
                           { :name => 'Classic Cheesburger' },
                           { :name => 'Meatloaf' }
                         ])
-#   Character.create(name: 'Luke', movie: movies.first)
+  Note.create([
+
+                          { :body => 'Raise Price', :item_id => 1},
+                          { :body => 'Not selling; to remove from menu', :item_id => 2},
+                          { :body => 'Add an extra slice of cheese', :item_id => 3},
+                          { :body => 'Think of Nostalgic name for Meatloaf', :item_id => 4}
+                          
+  ])
