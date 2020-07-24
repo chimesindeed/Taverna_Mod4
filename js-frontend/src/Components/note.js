@@ -3,7 +3,8 @@ class Note {
     this.id = noteJSON.id
     this.body = noteJSON.body
   }
-    renderLi() {
+    
+  renderLi() {
       return `<li>${this.name}</li>`
     }
 }
