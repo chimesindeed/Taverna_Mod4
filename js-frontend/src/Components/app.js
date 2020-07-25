@@ -4,30 +4,30 @@ class App {
   console.log('app.js was run')
     this.allItems = []
     this.adapter = new Adapter
-    this.DOMListenersBindings()
+    this.DOM = new DOMElements
+    this.render = new Render
     this.getItems()
+    this.DOMListenersAndBindings()
   }
 
-  DOMListenersBindings() {
-    this.ul = document.getElementById('ul-items-holder')
-    this.li = document.createElement('li')
-    this.inputName = document.getElementById('form-input-name')
-    this.inputPrice =  document.getElementById('form-input-price')
-    this.form = document.getElementById('create-item-form')
-    this.form.addEventListener('submit', this.createItem.bind(this))
-    this.ul.addEventListener('click',(()=>{ this.ul.innerHTML = renderNoteLi()
+  DOMListenersAndBindings() {
+    
+    this.DOM.form.addEventListener('submit', this.createItem.bind(this))
+    this.DOM.ul.addEventListener('click',(()=>{ this.DOM.ul.innerHTML = render.renderNoteLi()
 
     }))
   }
 
   createItem(e){
     e.preventDefault()
-    const value = this.input.value
+    const name = this.DOM.inputName.value
+    const price = this.DOM.inputPrice.value
 
-    this.adapter.createItem(value).then(item => {
+    this.adapter.createItem(name, price).then(item => {
       this.allItems.push(new Item(item))
-      this.input.value = ''
-      this.render()
+      this.DOM.inputName.value = ''
+      this.DOM.inputPrice.value = ''
+      this.render.renderItemLi()
     })
   }
 
@@ -38,12 +38,12 @@ class App {
         items.forEach(item => this.allItems.push(new Item(item)))
       })
       .then(() => {
-        this.render()
+        this.render.renderItemLi()
       })
     }
 
   render(){
-    this.ul.innerHTML = this.allItems.map(item => item.renderItemLi()).join('')
+    this.ul.innerHTML = this.allItems.map(item => item.render.renderItemLi()).join('')
     }
 
   }
