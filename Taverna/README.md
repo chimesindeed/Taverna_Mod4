@@ -1,24 +1,7 @@
-# README
+# TAVERNA - 
+#### Simple Single Page App for Restaurant Owner's To Update Their Menu
+##### Menu Items Are Loaded At Startup
+##### With Options to Create And Delete Items
+##### And Add Notes to Specific Items
+##### If You Click On An Item You See Notes Made for That Item
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
