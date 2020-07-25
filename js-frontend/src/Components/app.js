@@ -11,9 +11,13 @@ class App {
   DOMListenersBindings() {
     this.ul = document.getElementById('ul-items-holder')
     this.li = document.createElement('li')
-    this.input = document.getElementById('form-input')
+    this.inputName = document.getElementById('form-input-name')
+    this.inputPrice =  document.getElementById('form-input-price')
     this.form = document.getElementById('create-item-form')
     this.form.addEventListener('submit', this.createItem.bind(this))
+    this.ul.addEventListener('click',(()=>{ this.ul.innerHTML = renderNoteLi()
+
+    }))
   }
 
   createItem(e){
