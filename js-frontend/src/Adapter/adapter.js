@@ -11,9 +11,10 @@ class Adapter {
       .then(res => res.json())
   }
 
- createItem(value){
+ createItem(name, price){
   const item = {
-  name: value
+  name: name,
+  price: price
   }
   return fetch(this.baseURL,{
     method: 'POST',
