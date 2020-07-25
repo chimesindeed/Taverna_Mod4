@@ -4,10 +4,10 @@
 # Examples:
 #
   Item.create([
-                          { :name => 'Bagel w. CC' },
-                          { :name => 'Pastrami Sandwich' },
-                          { :name => 'Classic Cheesburger' },
-                          { :name => 'Meatloaf' }
+                          { :name => 'Bagel w. CC', :price => 3.25},
+                          { :name => 'Pastrami Sandwich', :price => 6.95 },
+                          { :name => 'Classic Cheesburger', :price => 8.75 },
+                          { :name => 'Meatloaf', :price => 7.25}
                         ])
   Note.create([
 
