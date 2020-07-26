@@ -12,6 +12,7 @@ class App {
   DOMListenersAndBindings() {
 
     this.DOM.form.addEventListener('submit', this.createItem.bind(this))
+    //this.getItems.bind(this)
     // this.DOM.ul.addEventListener('click',(()=>{ this.DOM.ul.innerHTML = render.renderNoteLi()
 
    // }))
@@ -33,12 +34,11 @@ class App {
   getItems() {
     this.adapter
       .getItems()
-      .then(items => { items.forEach(item => this.render.allItems.push(new Item(item)))})
+      .then(items => items.forEach((item)=>{
+        this.render.allItems.push(new Item(item))
+        })
+        )
       .then(() => {this.render.renderItems()})
   }
-
-  render(){
-    this.ul.innerHTML = this.allItems.map(item => item.render.renderItemLi()).join('')
-    }
 
   }
