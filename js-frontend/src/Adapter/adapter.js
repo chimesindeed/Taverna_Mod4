@@ -25,4 +25,3 @@ class Adapter {
     }).then(res => res.json())
   }
 }
-
