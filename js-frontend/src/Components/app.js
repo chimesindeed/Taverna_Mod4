@@ -10,12 +10,11 @@ class App {
   }
 
   DOMListenersAndBindings() {
-    
     this.DOM.form.addEventListener('submit', this.createItem.bind(this))
-    //this.getItems.bind(this)
-    // this.DOM.ul.addEventListener('click',(()=>{ this.DOM.ul.innerHTML = render.renderNoteLi()
+    this.DOM.ul.addEventListener('dblclick', function(){
+      this.DOM.ul.innerHTML = render.renderNoteLi()
 
-   // }))
+   })
   }
 
   createItem(e){
