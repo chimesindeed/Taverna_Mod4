@@ -12,14 +12,13 @@ class ItemsController < ApplicationController
       flash[:notice] = 'Not Saved'
     end
   end
-
-  def edit
-  end
-
-  def update
-  end
   
+  def show
+    item = Item.find(params[:id])
+    render json: item
+  end
   def destroy
+    binding.pry
     item = Item.find(params[:id])
     render json: {itemId: item.id}
   end
