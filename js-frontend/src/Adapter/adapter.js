@@ -6,9 +6,10 @@ class Adapter {
     this.baseURL = url
   }
 
-  getItems(){
-    return fetch(this.baseURL)
-      .then(res => res.json())
+  async getItems(){
+    let response = await fetch(this.baseURL);
+    let data = await response.json();
+    return data;
   }
 
  createItem(name, price){

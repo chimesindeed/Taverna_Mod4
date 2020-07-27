@@ -1,0 +1,14 @@
+body{background-color: brown}
+.taverna-container{
+  display: flex;
+}
+
+.left-col {
+  background-color: cadetblue;
+  flex: 50%;
+}
+
+.right-col {
+  background-color: forestgreen;
+  flex: 50%;
+}
