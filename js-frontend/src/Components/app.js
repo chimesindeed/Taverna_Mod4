@@ -11,12 +11,14 @@ class App {
 
   DOMListenersAndBindings() {
     this.DOM.form.addEventListener('submit', this.createItem.bind(this))
-    this.DOM.ul.addEventListener('dblclick', function(){
-      this.DOM.ul.innerHTML = render.renderNoteLi()
-
-   })
+    this.DOM.ul.addEventListener('dblclick', this.adapter.getNotes.bind(this))
+    this.DOM.deleteButton.addEventListener('click', this.deleteItem.bind(this))
   }
 
+  deleteItem(e){
+  e.preventDefault
+    this.adapter.deleteItem()
+  }
   createItem(e){
     e.preventDefault()
     const name = this.DOM.inputName.value
@@ -33,15 +35,12 @@ class App {
   getItems() {
     this.adapter
       .getItems()
-      //
       .then(items => {
         items.forEach(item => this.render.allItems.push(new Item(item)))
-      
+        items.forEach(item =>
+          item.notes.forEach(note =>
+            this.render.allNotes.push(new Note(note))))
       })
-      .then(() => {
-        this.render.renderItems()
-      })
-      
+      .then(items => this.render.renderItems());
     }
-
-  }
+}
