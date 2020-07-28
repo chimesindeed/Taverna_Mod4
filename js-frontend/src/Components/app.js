@@ -12,12 +12,14 @@ class App {
   DOMListenersAndBindings() {
     this.DOM.form.addEventListener('submit', this.createItem.bind(this))
     this.DOM.ul.addEventListener('dblclick', this.adapter.getNotes.bind(this))
-    this.DOM.deleteButton.addEventListener('click', this.deleteItem.bind(this))
+    this.DOM.ul.addEventListener('click', this.deleteItem.bind(this))
   }
-
+  
   deleteItem(e){
   e.preventDefault
-    this.adapter.deleteItem()
+  const li = e.target
+    this.adapter.deleteData(li.dataset.hello, this.adapter.baseURL)
+    this.render.renderIems()
   }
   createItem(e){
     e.preventDefault()

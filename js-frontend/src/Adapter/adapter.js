@@ -4,7 +4,6 @@ class Adapter {
     console.log('adapter.js was run')
     const url = 'http://localhost:3000/items'
     this.baseURL = url
-    this.delete_url = `http://localhost:3000/items/3`
   }
 
   async getItems(){
@@ -34,10 +33,11 @@ class Adapter {
     body: JSON.stringify({item})
     }).then(res => res.json())
   }
-deleteItem(item){
-  return fetch(this.delete_url, {
-    method: 'DELETE'
-  })
-  .then(res => res.json());
-  }
+   deleteData(item, url){
+     return fetch(url + '/' + item, {
+       method: 'delete'
+     })
+      .then(response => response.json())
+      .then(data => console.log(data));
+   }
 }

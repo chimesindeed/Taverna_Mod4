@@ -18,8 +18,7 @@ class ItemsController < ApplicationController
     render json: item
   end
   def destroy
-    binding.pry
-    item = Item.find(params[:id])
+    item = Item.find(params[:id]).destroy
     render json: {itemId: item.id}
   end
   
