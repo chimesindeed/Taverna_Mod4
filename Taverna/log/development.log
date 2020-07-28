@@ -14730,3 +14730,965 @@ Processing by ItemsController#destroy as */*
 Completed 200 OK in 139ms (Views: 1.1ms | ActiveRecord: 127.1ms | Allocations: 3897)
 
 
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:35:07 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 5]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 10]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 11]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 12]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.81ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 2.7ms | Allocations: 27842)
+
+
+Started DELETE "/items/4" for 127.0.0.1 at 2020-07-27 21:35:09 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (118.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 130ms (Views: 3.0ms | ActiveRecord: 119.2ms | Allocations: 4521)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:36:04 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 5]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 10]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 11]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 12]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.92ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 1.1ms | Allocations: 8531)
+
+
+Started DELETE "/items/5" for 127.0.0.1 at 2020-07-27 21:36:06 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (119.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 133ms (Views: 1.4ms | ActiveRecord: 120.3ms | Allocations: 3913)
+
+
+Started DELETE "/items/5" for 127.0.0.1 at 2020-07-27 21:36:11 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 641)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=5):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:36:14 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 10]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 11]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 12]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.19ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.9ms | Allocations: 7257)
+
+
+Started DELETE "/items/10" for 127.0.0.1 at 2020-07-27 21:36:17 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (121.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 140ms (Views: 1.3ms | ActiveRecord: 122.2ms | Allocations: 3899)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:43:12 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 11]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 12]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.0ms)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 1.5ms | Allocations: 19837)
+
+
+Started DELETE "/items/11" for 127.0.0.1 at 2020-07-27 21:43:14 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (128.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 149ms (Views: 3.9ms | ActiveRecord: 129.8ms | Allocations: 4524)
+
+
+Started DELETE "/items/11" for 127.0.0.1 at 2020-07-27 21:43:56 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 641)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=11):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:45:24 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 12]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 13]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.19ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.8ms | Allocations: 4768)
+
+
+Started DELETE "/items/12" for 127.0.0.1 at 2020-07-27 21:45:26 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (119.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 135ms (Views: 1.1ms | ActiveRecord: 120.8ms | Allocations: 3917)
+
+
+Started DELETE "/items/13" for 127.0.0.1 at 2020-07-27 21:45:28 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (118.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 135ms (Views: 1.1ms | ActiveRecord: 119.6ms | Allocations: 3897)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:45:33 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.98ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 2243)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:46:02 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.83ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2246)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:46:04 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.98ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 2299)
+
+
+Started DELETE "/items/8" for 127.0.0.1 at 2020-07-27 21:46:04 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (124.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 137ms (Views: 1.5ms | ActiveRecord: 125.6ms | Allocations: 3897)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:46:08 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 989)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20200722020525)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200722020525"]]
+  [1m[35m (91.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNotes (20200723191000)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "item_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200723191000"]]
+  [1m[35m (94.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-28 01:47:35.732138"], ["updated_at", "2020-07-28 01:47:35.732138"]]
+  [1m[35m (81.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bagel w. CC"], ["price", 3.25], ["created_at", "2020-07-28 01:47:40.422720"], ["updated_at", "2020-07-28 01:47:40.422720"]]
+  [1m[35m (128.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pastrami Sandwich"], ["price", 6.95], ["created_at", "2020-07-28 01:47:40.557478"], ["updated_at", "2020-07-28 01:47:40.557478"]]
+  [1m[35m (64.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Classic Cheesburger"], ["price", 8.75], ["created_at", "2020-07-28 01:47:40.631677"], ["updated_at", "2020-07-28 01:47:40.631677"]]
+  [1m[35m (64.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Meatloaf"], ["price", 7.25], ["created_at", "2020-07-28 01:47:40.704054"], ["updated_at", "2020-07-28 01:47:40.704054"]]
+  [1m[35m (69.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.3ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Raise Price"], ["item_id", 1], ["created_at", "2020-07-28 01:47:40.815033"], ["updated_at", "2020-07-28 01:47:40.815033"]]
+  [1m[35m (67.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Note 2"], ["item_id", 1], ["created_at", "2020-07-28 01:47:40.893562"], ["updated_at", "2020-07-28 01:47:40.893562"]]
+  [1m[35m (66.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNote Create (0.2ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Not selling; to remove from menu"], ["item_id", 2], ["created_at", "2020-07-28 01:47:40.974489"], ["updated_at", "2020-07-28 01:47:40.974489"]]
+  [1m[35m (68.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Add an extra slice of cheese"], ["item_id", 3], ["created_at", "2020-07-28 01:47:41.053247"], ["updated_at", "2020-07-28 01:47:41.053247"]]
+  [1m[35m (87.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mNote Create (0.4ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Think of Nostalgic name for Meatloaf"], ["item_id", 4], ["created_at", "2020-07-28 01:47:41.153010"], ["updated_at", "2020-07-28 01:47:41.153010"]]
+  [1m[35m (60.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items" for 127.0.0.1 at 2020-07-27 21:48:02 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 1]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.66ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 2.4ms | Allocations: 24664)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2020-07-27 21:49:03 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (106.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 132ms (Views: 16.7ms | ActiveRecord: 106.6ms | Allocations: 7464)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/items/4" for 127.0.0.1 at 2020-07-27 22:11:38 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (112.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 133ms (Views: 3.0ms | ActiveRecord: 113.8ms | Allocations: 10750)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:11:44 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.98ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 1.8ms | Allocations: 15501)
+
+
+Started DELETE "/items/3" for 127.0.0.1 at 2020-07-27 22:12:10 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (123.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 138ms (Views: 1.1ms | ActiveRecord: 124.2ms | Allocations: 3915)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:12:14 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.39ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 2408)
+
+
+Started DELETE "/items/2" for 127.0.0.1 at 2020-07-27 22:12:16 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (54.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 73ms (Views: 1.2ms | ActiveRecord: 55.7ms | Allocations: 3811)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:12:21 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 988)
+
+
+Started POST "/items" for 127.0.0.1 at 2020-07-27 22:12:32 -0400
+Processing by ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"a", "price"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "a"], ["price", 1.0], ["created_at", "2020-07-28 02:12:32.415916"], ["updated_at", "2020-07-28 02:12:32.415916"]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[35m (118.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 5]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:10:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (4.33ms)
+Completed 200 OK in 133ms (Views: 5.1ms | ActiveRecord: 119.2ms | Allocations: 5304)
+
+
+Started POST "/items" for 127.0.0.1 at 2020-07-27 22:12:36 -0400
+Processing by ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"b", "price"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "b"], ["price", 2.0], ["created_at", "2020-07-28 02:12:36.156394"], ["updated_at", "2020-07-28 02:12:36.156394"]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[35m (119.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 6]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:10:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (4.89ms)
+Completed 200 OK in 140ms (Views: 5.8ms | ActiveRecord: 120.5ms | Allocations: 5062)
+
+
+Started POST "/items" for 127.0.0.1 at 2020-07-27 22:12:40 -0400
+Processing by ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"c", "price"=>"3"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "c"], ["price", 3.0], ["created_at", "2020-07-28 02:12:40.007260"], ["updated_at", "2020-07-28 02:12:40.007260"]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[35m (97.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 7]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:10:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (5.4ms)
+Completed 200 OK in 119ms (Views: 6.2ms | ActiveRecord: 98.9ms | Allocations: 5134)
+
+
+Started POST "/items" for 127.0.0.1 at 2020-07-27 22:12:44 -0400
+Processing by ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"d", "price"=>"4"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "d"], ["price", 4.0], ["created_at", "2020-07-28 02:12:44.317378"], ["updated_at", "2020-07-28 02:12:44.317378"]]
+  ↳ app/controllers/items_controller.rb:9:in `create'
+  [1m[35m (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 8]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:10:in `create'
+[active_model_serializers] Rendered ItemSerializer with ActiveModelSerializers::Adapter::Attributes (4.29ms)
+Completed 200 OK in 135ms (Views: 5.1ms | ActiveRecord: 116.4ms | Allocations: 5061)
+
+
+Started DELETE "/items/5" for 127.0.0.1 at 2020-07-27 22:12:48 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (116.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 133ms (Views: 1.1ms | ActiveRecord: 117.8ms | Allocations: 3898)
+
+
+Started DELETE "/items/5" for 127.0.0.1 at 2020-07-27 22:12:48 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 627)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=5):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (90.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (93.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20200722020525)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200722020525"]]
+  [1m[35m (161.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNotes (20200723191000)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "item_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200723191000"]]
+  [1m[35m (105.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-28 02:13:35.588370"], ["updated_at", "2020-07-28 02:13:35.588370"]]
+  [1m[35m (76.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bagel w. CC"], ["price", 3.25], ["created_at", "2020-07-28 02:13:39.667676"], ["updated_at", "2020-07-28 02:13:39.667676"]]
+  [1m[35m (117.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pastrami Sandwich"], ["price", 6.95], ["created_at", "2020-07-28 02:13:39.790418"], ["updated_at", "2020-07-28 02:13:39.790418"]]
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Classic Cheesburger"], ["price", 8.75], ["created_at", "2020-07-28 02:13:39.872557"], ["updated_at", "2020-07-28 02:13:39.872557"]]
+  [1m[35m (70.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Meatloaf"], ["price", 7.25], ["created_at", "2020-07-28 02:13:39.956325"], ["updated_at", "2020-07-28 02:13:39.956325"]]
+  [1m[35m (67.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.3ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Raise Price"], ["item_id", 1], ["created_at", "2020-07-28 02:13:40.074323"], ["updated_at", "2020-07-28 02:13:40.074323"]]
+  [1m[35m (74.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Note 2"], ["item_id", 1], ["created_at", "2020-07-28 02:13:40.163793"], ["updated_at", "2020-07-28 02:13:40.163793"]]
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Not selling; to remove from menu"], ["item_id", 2], ["created_at", "2020-07-28 02:13:40.252313"], ["updated_at", "2020-07-28 02:13:40.252313"]]
+  [1m[35m (59.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Add an extra slice of cheese"], ["item_id", 3], ["created_at", "2020-07-28 02:13:40.328013"], ["updated_at", "2020-07-28 02:13:40.328013"]]
+  [1m[35m (66.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Think of Nostalgic name for Meatloaf"], ["item_id", 4], ["created_at", "2020-07-28 02:13:40.413582"], ["updated_at", "2020-07-28 02:13:40.413582"]]
+  [1m[35m (72.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:13:51 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 1]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.31ms)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 2.0ms | Allocations: 16316)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2020-07-27 22:13:53 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (115.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 134ms (Views: 2.7ms | ActiveRecord: 116.5ms | Allocations: 4178)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2020-07-27 22:13:53 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 623)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=1):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:14:05 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.07ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms | Allocations: 5189)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:20:26 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.21ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.9ms | Allocations: 5223)
+
+
+Started DELETE "/items/2" for 127.0.0.1 at 2020-07-27 22:20:33 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 129ms (Views: 1.2ms | ActiveRecord: 117.2ms | Allocations: 3914)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:25:29 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.39ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 3792)
+
+
+Started DELETE "/items/3" for 127.0.0.1 at 2020-07-27 22:25:31 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (129.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 147ms (Views: 1.2ms | ActiveRecord: 130.4ms | Allocations: 3974)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:25:37 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.63ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2390)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (137.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (155.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20200722020525)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" float, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200722020525"]]
+  [1m[35m (205.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateNotes (20200723191000)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar, "item_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200723191000"]]
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-28 02:26:30.629521"], ["updated_at", "2020-07-28 02:26:30.629521"]]
+  [1m[35m (69.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bagel w. CC"], ["price", 3.25], ["created_at", "2020-07-28 02:26:35.630392"], ["updated_at", "2020-07-28 02:26:35.630392"]]
+  [1m[35m (115.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pastrami Sandwich"], ["price", 6.95], ["created_at", "2020-07-28 02:26:35.751978"], ["updated_at", "2020-07-28 02:26:35.751978"]]
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Classic Cheesburger"], ["price", 8.75], ["created_at", "2020-07-28 02:26:35.817270"], ["updated_at", "2020-07-28 02:26:35.817270"]]
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Meatloaf"], ["price", 7.25], ["created_at", "2020-07-28 02:26:35.882780"], ["updated_at", "2020-07-28 02:26:35.882780"]]
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.7ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Raise Price"], ["item_id", 1], ["created_at", "2020-07-28 02:26:35.987692"], ["updated_at", "2020-07-28 02:26:35.987692"]]
+  [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Note 2"], ["item_id", 1], ["created_at", "2020-07-28 02:26:36.065449"], ["updated_at", "2020-07-28 02:26:36.065449"]]
+  [1m[35m (68.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNote Create (0.6ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Not selling; to remove from menu"], ["item_id", 2], ["created_at", "2020-07-28 02:26:36.157391"], ["updated_at", "2020-07-28 02:26:36.157391"]]
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Add an extra slice of cheese"], ["item_id", 3], ["created_at", "2020-07-28 02:26:36.239840"], ["updated_at", "2020-07-28 02:26:36.239840"]]
+  [1m[35m (67.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mNote Create (0.5ms)[0m  [1m[32mINSERT INTO "notes" ("body", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "Think of Nostalgic name for Meatloaf"], ["item_id", 4], ["created_at", "2020-07-28 02:26:36.323011"], ["updated_at", "2020-07-28 02:26:36.323011"]]
+  [1m[35m (67.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:30:16 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 1]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.27ms)
+Completed 200 OK in 44ms (Views: 37.9ms | ActiveRecord: 2.0ms | Allocations: 24664)
+
+
+Started DELETE "/items/1" for 127.0.0.1 at 2020-07-27 22:30:18 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (122.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 142ms (Views: 3.0ms | ActiveRecord: 123.7ms | Allocations: 4420)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:30:34 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.88ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.7ms | Allocations: 5209)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:26 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 2]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.46ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 5209)
+
+
+Started DELETE "/items/2" for 127.0.0.1 at 2020-07-27 22:35:28 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (1.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (115.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 134ms (Views: 1.4ms | ActiveRecord: 117.5ms | Allocations: 3914)
+
+
+Started DELETE "/items/2" for 127.0.0.1 at 2020-07-27 22:35:39 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 627)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=2):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:43 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.26ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 3789)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:45 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.74ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.5ms | Allocations: 3791)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:45 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 3]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.87ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 3790)
+
+
+Started DELETE "/items/3" for 127.0.0.1 at 2020-07-27 22:35:47 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[36mItem Destroy (2.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+  [1m[35m (117.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 135ms (Views: 2.0ms | ActiveRecord: 119.7ms | Allocations: 3898)
+
+
+Started DELETE "/items/3" for 127.0.0.1 at 2020-07-27 22:35:47 -0400
+Processing by ItemsController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:21:in `destroy'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 623)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=3):
+  
+app/controllers/items_controller.rb:21:in `destroy'
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:51 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2390)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:52 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.11ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 2390)
+
+
+Started GET "/items" for 127.0.0.1 at 2020-07-27 22:35:53 -0400
+Processing by ItemsController#index as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."item_id" = ?[0m  [["item_id", 4]]
+[active_model_serializers]   ↳ app/controllers/items_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.27ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 2390)
+
+

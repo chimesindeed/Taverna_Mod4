@@ -19,8 +19,11 @@ class App {
   e.preventDefault
   const li = e.target
     this.adapter.deleteData(li.dataset.hello, this.adapter.baseURL)
-    this.render.renderIems()
-  }
+    .then(data => console.log(data))
+      //this.render.allItems.forEach(item => {
+      //if (item.id==data){delete this.render.allItems[item]}}))
+ }
+  
   createItem(e){
     e.preventDefault()
     const name = this.DOM.inputName.value
