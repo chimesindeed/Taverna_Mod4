@@ -12,14 +12,6 @@ class Adapter {
     return data;
   }
 
-  getNotes(e) {
-    const li = e.target
-    let arr = []
-    this.render.allNotes.map(note => {
-      if (note.item_id == li.dataset.hello){
-        arr.push(note.body)}})
-    this.DOM.ul.innerHTML = arr
-   }
  createItem(name, price){
   const item = {
     name: name,

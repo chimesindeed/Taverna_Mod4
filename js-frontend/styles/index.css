@@ -12,3 +12,36 @@ body{background-color: brown}
   background-color: forestgreen;
   flex: 50%;
 }
+
+
+.column-container {
+  display: table;
+  clear: both;
+}
+.col-4 {
+  float: left;
+  height: 470px;
+  width: 33%;
+  padding: 0 10px;  
+}
+#left-col {
+  background-color: forestgreen;
+  width: 30%;
+}
+
+#right-col {
+  background-color: cadetblue;
+  width: 50%;
+  
+}
+
+#item-holder {
+  float: left;
+  margin-bottom: 5px;
+}
+
+#open-notes {
+  float: left;
+  margin-left: 12px;
+  margin-bottom: 5px
+}
