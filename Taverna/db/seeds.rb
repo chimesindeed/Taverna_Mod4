@@ -4,14 +4,22 @@
 # Examples:
 #
   Item.create([
-                          { :name => 'Bagel w. CC', :price => 3.25},
-                          { :name => 'Pastrami Sandwich', :price => 6.95 },
-                          { :name => 'Classic Cheesburger', :price => 8.75 },
-                          { :name => 'Meatloaf', :price => 7.25 },
-                          { :name => 'Greek Omelette', :price => 7.75 },
-                          { :name => 'Chicken Noodle Soup', :price => 3.25 },
-                          { :name => 'French Toast', :price => 5.95 },
-                          { :name => 'Cheese Sticks-side', :price => 5.95 }
+                          { :name => 'Bagel w. CC',
+                              :price => 3.25},
+                          { :name => 'Pastrami Sandwich',
+                              :price => 6.95 },
+                          { :name => 'Classic Cheesburger',
+                              :price => 8.75 },
+                          { :name => 'Meatloaf',
+                              :price => 7.25 },
+                          { :name => 'Greek Omelette',
+                              :price => 7.75 },
+                          { :name => 'Chicken Noodle Soup',
+                              :price => 3.25 },
+                          { :name => 'French Toast',
+                              :price => 5.95 },
+                          { :name => 'Cheese Sticks-side',
+                              :price => 5.95 }
                       
                         ])
   Note.create([

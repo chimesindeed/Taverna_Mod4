@@ -7,7 +7,6 @@ class App {
     this.inputPrice =  document.getElementById('form-input-price')
     
     this.adapter = new Adapter
-    this.DOM = new DOMElements
     this.render = new Render
     this.getItems()
     this.DOMListenersAndBindings()
@@ -20,12 +19,13 @@ class App {
   
   deleteItem(e){
   e.preventDefault
+  let deleted;
   const li = e.target
     this.adapter.deleteData(li.dataset.item_id, this.adapter.baseURL)
-    .then(data => console.log(data));
-    this.render.allItems = []
-    this.ul.innerHTML=""
-    this.getItems()
+    .then(res => {
+      this.getItems()
+    })
+   
  }
   
   createItem(e){
@@ -42,6 +42,7 @@ class App {
   }
 
   getItems() {
+    this.render.allItems = []
     this.adapter
       .getItems()
       .then(items => {

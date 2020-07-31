@@ -25,10 +25,10 @@ class Adapter {
     body: JSON.stringify({item})
     }).then(res => res.json())
   }
-   deleteData(item, url){
-     return fetch(url + '/' + item, {
-       method: 'delete'
-     })
-      .then(response => response.json())
-      .then(data => console.log(data))}
+  deleteData(item, url){
+    return fetch(url + '/' + item, {
+      method: 'delete'
+    })
+    .then(response => response.json())
+  }
 }

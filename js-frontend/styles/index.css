@@ -1,37 +1,24 @@
 body{background-color: brown}
-.taverna-container{
+
+.column-container {
   display: flex;
+  clear: both;
 }
 
 .left-col {
-  background-color: cadetblue;
-  flex: 50%;
+  float: left;
+  background-color: forestgreen;
+  width: 280px;
+  height: 600px;
+  padding: 0 10px;
 }
 
 .right-col {
-  background-color: forestgreen;
-  flex: 50%;
-}
-
-
-.column-container {
-  display: table;
-  clear: both;
-}
-.col-4 {
   float: left;
-  height: 470px;
-  width: 33%;
-  padding: 0 10px;  
-}
-#left-col {
-  background-color: forestgreen;
-  width: 30%;
-}
-
-#right-col {
   background-color: cadetblue;
-  width: 50%;
+  width: 400px;
+  height: 600px;
+  padding: 0 10px;
   
 }
 
