@@ -8,20 +8,21 @@ class App {
     
     this.adapter = new Adapter
     this.render = new Render
-    this.getItems()
     this.DOMListenersAndBindings()
+    
+    this.getItems()
   }
 
   DOMListenersAndBindings() {
     this.form.addEventListener('submit', this.createItem.bind(this))
-    this.ul.addEventListener('dblclick', this.deleteItem.bind(this))
+    this.ul.addEventListener('dblclick', this.deleteItem.bind(this));
   }
   
   deleteItem(e){
   e.preventDefault
   let deleted;
   const li = e.target
-    this.adapter.deleteData(li.dataset.item_id, this.adapter.baseURL)
+    this.adapter.deleteData(li.dataset.item_id)
     .then(res => {
       this.getItems()
     })
@@ -37,7 +38,7 @@ class App {
       this.render.allItems.push(new Item(item))
       this.inputName.value = ''
       this.inputPrice.value = ''
-      this.render.renderItems()
+      this.getItems()
     })
   }
 
@@ -53,4 +54,7 @@ class App {
       })
       .then(items => this.render.renderItems());
     }
-}
+ 
+ 
+ }
+

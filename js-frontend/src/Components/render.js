@@ -10,7 +10,9 @@ class Render {
 
   renderItems() {
     this.ul.innerHTML = this.allItems.map(item =>
-      `<div id='item-holder'><li data-item_id=${item.id}>${item.name} - $${item.price}</li></div><div id='open-notes'><button id=${item.id} class="note-buttons">Notes</button></div></br>`)
+      `<div id='item-holder'><li data-item_id=${item.id}>${item.name} - `
+      + `$${item.price}</li></div>`
+      + `<div id='open-notes'><button id=${item.id} class="note-buttons">Notes</button></div></br>`)
     this.noteButtons=document.getElementsByClassName('note-buttons');
     let arr = Array.from(this.noteButtons).forEach(button =>
       button.addEventListener('click', this.renderNotes.bind(this)))
