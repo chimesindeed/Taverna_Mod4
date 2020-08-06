@@ -59,7 +59,7 @@ class App extends Render{
       this.adapter.deleteItem(li.dataset.item_id)
       .then(res => {
         this.getItems();
-        this.getItems()
+        
       })
     }
     
