@@ -6,16 +6,12 @@
 - RETRIEVE
 - CREATE
 - DELETE
-### CRUD actions with which they can View their current menu Items, Add an Item to their menu or Delete an item from their menu.
-
-### Items also have notes.  If a user double clicks on an item, their notes for the item will be displayed. 
+### CRUD for Menu Items, and Notes for their Menu Items.
 
 -------------------------------------------------------------------------------------------------------------------------------------
-### The back-end endpoint for vanilla JavaScript to connect to is stored in an Adapter Class.
+### The back-end endpoints for vanilla JavaScript to connect are stored in an Adapter Class.
 
-## DOM isolation consts are stored in a ‘DOMElements’ class.
-
-### A Render class stores the bulk of rendering functionality.
+## DOM elements (isolated in consts) and Render functionality are both implemented in a Render class which the main App class extends.
 
 ### There is an Item class and a Note class for specifying the format of new Items and Notes.
 
