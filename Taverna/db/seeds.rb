@@ -19,6 +19,14 @@
                           { :name => 'French Toast',
                               :price => 5.95 },
                           { :name => 'Cheese Sticks-side',
+                              :price => 5.95 },
+                          { :name => 'Coca-Cola',
+                              :price => 2.75 },
+                          { :name => 'Coffee',
+                              :price => 1.65 },
+                          { :name => 'Tea',
+                              :price => 1.75 },
+                          { :name => 'Cheese Cake',
                               :price => 5.95 }
                       
                         ])
@@ -28,6 +36,9 @@
                           { :body => 'Note 2', :item_id => 1},
                           { :body => 'Not selling; to remove from menu', :item_id => 2},
                           { :body => 'Add an extra slice of cheese', :item_id => 3},
-                          { :body => 'Think of Nostalgic name for Meatloaf', :item_id => 4}
-                          
-  ])
+                          { :body => 'Think of nostaligic name for Meat Loaf', :item_id => 4},
+                          { :body => 'Check brand of feta', :item_id => 5},
+                          { :body => 'Raise price by 75 cents', :item_id => 5},
+                          { :body => 'Chicken soup needs a larger bowl', :item_id => 6},
+                          { :body => 'Change name to Mozzarella Sticks', :item_id => 8},
+                        ])

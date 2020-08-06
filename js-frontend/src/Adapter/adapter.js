@@ -16,20 +16,17 @@ class Adapter {
     return data;
   }
 
-  getNotes(e) {
-    const li = e.target
-    let arr = []
-    this.render.allNotes.map(note => {
-      if (note.item_id == li.dataset.hello){
-        arr.push(note.body)}})
-    this.DOM.ul.innerHTML = arr
-   }
 createNote(body, item_id){
   const note = {
     body: body,
     item_id: item_id
   }
-  return fetch()
+  return fetch(`${this.baseURL}${this.notes}`,{
+    method: 'POST',
+    headers: {'content-type': 'application/json'
+  },
+  body: JSON.stringify({note})
+  }).then(res => res.json())
 }
 
  createItem(name, price){
@@ -45,13 +42,21 @@ createNote(body, item_id){
     body: JSON.stringify({item})
     }).then(res => res.json())
   }
-  deleteData(item){
+  deleteItem(item){
     return fetch(`${this.baseURL}${this.items}/${item}`, {
       method: 'delete',
       headers: {'Content-Type': 'application/json'}
     })
      .then(response => response.json())
      .then(data => console.log(data))}
+
+deleteNote(note){
+  return fetch(`${this.baseURL}${this.notes}/${note}`, {
+    method: 'delete',
+    headers: {'Content-Type': 'application/json'}
+  })
+   .then(response => response.json())
+   .then(data => console.log(data))}
 }
 
 
